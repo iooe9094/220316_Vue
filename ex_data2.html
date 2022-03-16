@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h2>객체로 값을 표시하는 연습문제 2</h2>
+        <!-- 뷰영역 -->
+        <div id="app">
+        <!-- 객체의 값 "다즐링" -->
+        <p> {{ myObject }}</p>
+        <!-- 객체의 값 중에서 "name price 원"으로 출력 -->
+        <p> {{ myObject.name + " " + myObject.price + " 원" }}</p>
+        <p> {{ myObject.name }} {{myObject.price }} 원</p>
+        </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data: {
+                myObject: 
+                    { name: "다즐링", price: 600 },
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h2>객체로 값을 표시하는 연습문제 3</h2>
+        <!-- 뷰영역 -->
+        <div id="app">
+        <!-- 객체배열의 모든 값을 출력-->
+        <p> {{ object }}</p>
+        <!-- 객체배열 중 두번 째 원소를 선택해서 name price 출력 -->
+        <p> {{ object[1].name }} {{ object[1].price }} 원</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                object: [
+                    { name: "다즐링", price: 600 },
+                    { name: "얼그레이", price: 500 },
+                    { name: "실론", price: 500 }
+                ]
+            }
+        });
+    </script>
+</body>
+</html>

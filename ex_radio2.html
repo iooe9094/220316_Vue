@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="./count_up_down.css">
+</head>
+<body>
+    <!-- 라디오 버튼을 이용, 빨강 또는 파랑을 선택하면 -->
+    <!-- 빨간 또는 파랑으로 스타일 바뀌도록 제작 -->
+    <h2>텍스트 스타일 버튼으로 변경</h2>
+    <div id="app">
+        <label>
+            <input type="radio" value="red" v-model="changes">
+            빨간색
+        </label>
+            <input type="radio" value="blue" v-model="changes">
+            파란색
+        </label>
+        <br>
+        <p :style="{color: changes}">선택한 색상은 {{ changes }} 입니다.</p>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    changes: ''
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>

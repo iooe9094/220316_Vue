@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <!-- 네이버 연결 -->
+        <a :href="Naver">네이버</a>
+        <!-- 이미지 표시 -->
+        <img :src="Img">이미지
+        <!-- 텍스트 왼쪽 정렬 -->
+        <p :align="Left">왼쪽정렬</p>
+        <!-- 텍스트 가운데 정렬 -->
+        <p :align="Mid">중앙정렬</p>
+        <!-- 텍스트 오른쪽 정렬 -->
+        <p :align="Right">오른쪽정렬</p>
+        <!-- color : red -->
+        <p :style="RED">인라인을 이용해 글자색을 빨간색으로</p>
+
+        <!-- 기존 태그에 'v-bind' 제외한 ':' ~~~ 만 사용 가능 -->
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                Naver: "http://www.naver.com",
+                Img: "../img2/cat2.jpg",
+                Left: "left",
+                Mid: "center",
+                Right: "right",
+                RED: 'color: red'
+            }
+        });
+    </script>
+</body>
+</html>

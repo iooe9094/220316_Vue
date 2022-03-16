@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="./count_up_down.css">
+</head>
+<body>
+    <h2>이미지 출력을 라디오 버튼으로 변경하는 예제</h2>
+    <div id="app">
+        <label>
+            <input type="radio" value="../img2/cat1.jpg" v-model="changes">
+            고양이 1
+        </label>
+            <input type="radio" value="../img2/cat2.jpg" v-model="changes">
+            고양이 2
+        </label>
+        <br>
+        <!-- img src v-bind 변수로 넣어서 라디오 버튼을 클릭할 때 마다 -->
+        <!-- 이미지가 바뀌게 해서 출력해보기 -->
+        <img v-bind:src="changes">
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    changes: ''
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
